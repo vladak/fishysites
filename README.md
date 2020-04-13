@@ -13,7 +13,7 @@ them and use for my Pihole that is already used for blocking advertisements.
 
 ```
 curl -s -o fishy.html https://www.urbag.cz/podvodne-eshopy/
-echo "https://raw.githubusercontent.com/vladak/fishysites/master/fishy_domains.txt" >> /etc/pihole/adlists.list
+sudo echo "https://raw.githubusercontent.com/vladak/fishysites/master/fishy_domains.txt" >> /etc/pihole/adlists.list
 sudo pihole -g
 ```
 
