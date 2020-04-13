@@ -16,3 +16,10 @@ curl -s -o fishy.html https://www.urbag.cz/podvodne-eshopy/
 echo "XXX" >> /etc/pihole/adlists.list
 sudo pihole -g
 ```
+
+## how to refresh
+
+```
+pip3 install -r requirements.txt
+./parse.py > fishy_domains.txt
+```
