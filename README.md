@@ -12,7 +12,6 @@ them and use for my Pihole that is already used for blocking advertisements.
 ## how to use
 
 ```
-curl -s -o fishy.html https://www.urbag.cz/podvodne-eshopy/
 sudo echo "https://raw.githubusercontent.com/vladak/fishysites/master/fishy_domains.txt" >> /etc/pihole/adlists.list
 sudo pihole -g
 ```
@@ -20,6 +19,7 @@ sudo pihole -g
 ## how to refresh
 
 ```
+curl -s -o fishy.html https://www.urbag.cz/podvodne-eshopy/
 pip3 install -r requirements.txt
 ./parse.py > fishy_domains.txt
 ```
