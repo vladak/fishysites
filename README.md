@@ -1,6 +1,6 @@
 # fishysites
 
-List of fishy sites for Pihole blacklists. Mainly includes Czech domains suspected of performing
+List of fishy sites for Pihole blacklists. Includes mainly Czech domains suspected of performing
 phishing attacks and being fraudulent.
 
 ## motivation
