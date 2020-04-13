@@ -1,6 +1,6 @@
 # fishysites
 
-List of fishy sites for Pihole blacklists
+List of fishy sites for Pihole blacklists. Mainly includes Czech domains.
 
 ## motivation
 
