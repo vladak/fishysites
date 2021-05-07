@@ -12,13 +12,26 @@ them and use for my Pihole that is already used for blocking advertisements.
 
 ## How to use
 
+To delete all custom lists from the gravity database:
+
 ```
-echo "https://raw.githubusercontent.com/vladak/fishysites/master/fishy_domains.txt" | \
-    sudo tee -a /etc/pihole/adlists.list
+sudo sqlite3 /etc/pihole/gravity.db "DELETE FROM adlist"
+```
+
+Insert the custom list:
+
+```
+sudo wget -qO - https://raw.githubusercontent.com/vladak/fishysites/master/fishy_domains.txt | \
+    xargs -I {} sudo sqlite3 /etc/pihole/gravity.db "INSERT INTO adlist (Address) VALUES ('{}');"   
+```
+
+refresh:
+    
+```
 sudo pihole -g
 ```
 
-## How to refresh
+## How to refresh the list
 
 ```
 curl -s -o fishy.html https://www.urbag.cz/podvodne-eshopy/
