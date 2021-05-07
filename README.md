@@ -31,7 +31,7 @@ refresh:
 sudo pihole -g
 ```
 
-## How to refresh the list
+## How to refresh the list of domains
 
 ```
 curl -s -o fishy.html https://www.urbag.cz/podvodne-eshopy/
