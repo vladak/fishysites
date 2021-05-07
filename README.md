@@ -21,8 +21,8 @@ sudo sqlite3 /etc/pihole/gravity.db "DELETE FROM adlist"
 Insert the custom list:
 
 ```
-sudo wget -qO - https://raw.githubusercontent.com/vladak/fishysites/master/fishy_domains.txt | \
-    xargs -I {} sudo sqlite3 /etc/pihole/gravity.db "INSERT INTO adlist (Address) VALUES ('{}');"   
+sudo sqlite3 /etc/pihole/gravity.db \
+    "INSERT INTO adlist (Address) VALUES ('https://raw.githubusercontent.com/vladak/fishysites/master/fishy_domains.txt');" 
 ```
 
 refresh:
